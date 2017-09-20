@@ -1,0 +1,8 @@
+version: '2.0'
+services:
+  jmeter:
+    image: myregistry/dev/indi/stresstests:1.0.0
+    volumes:
+      - ./results:/app/results/
+      - ./config.csv:/app/testplans/config.csv
+    command: sh -c 'chown jmeter:jmeter /app/results && su jmeter -c "runtests -t \"testplans/testplan.jmx\""'
