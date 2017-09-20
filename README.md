@@ -1,7 +1,7 @@
 Stress Tests via the docker image and Apache Jmeter
 ===
 
-Introduction
+# Introduction
 ---
 
 The object is to start the stresstests with docker and Apache Jmeter :
@@ -12,7 +12,7 @@ Plugins Apache jmeter installed :
  * `plugins-manager-0.13` : manage the plugin
  * `plugins-casutg-2.1` : manage the user connections step by step
 
-1. Installation
+# 1. Installation
 ---
 
 Connect to the server which will run the stresstests and copy the files below in your own directory :
@@ -20,7 +20,7 @@ Connect to the server which will run the stresstests and copy the files below in
  * `docker-compose.yml` : docker-compose file which run the stresstests
  * `./testplans/plan.jmx` : your test plan in jmeter format (.jmx)
 
-2. Configuration
+# 2. Configuration
 ---
 
 Modify the config.csv with the real credentials :
@@ -41,7 +41,7 @@ services:
 ```
 
 
-3. Run the stresstests
+# 3. Run the stresstests
 ---
 Go to the directory where are the docker-compose.yml/config.csv files and run the stresstests :
 
@@ -50,6 +50,6 @@ docker-compose up
 ```
 
 
-4. Results
+# 4. Results
 ---
 In the `./results/` directory.
